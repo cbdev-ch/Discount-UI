@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/']">CBDEV Discount</a>
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLink]="['/']" (click)="isMenuCollapsed = true">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLink]="['/discount']" (click)="isMenuCollapsed = true">Discount</a>
+      </li>
+      <li *ngIf="router.url ==='/discount'" class="nav-item">
+        <button type="button" mat-button (click)="mainService.NavBarToggle.emit()">
+          Toggle sidenav
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

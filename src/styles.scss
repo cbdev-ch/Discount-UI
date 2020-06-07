@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '~bootstrap/scss/bootstrap';
+
+* {font-family: 'Nunito', sans-serif;transition: ease all 300ms;-webkit-transition: ease all 300ms;-moz-transition: ease all 300ms;-o-transition: ease all 300ms;}
+
+body {height: 100%;}
+
+#pagewrapper{min-height:100vh !important;}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
