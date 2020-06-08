@@ -11,9 +11,14 @@ export class NavbarComponent implements OnInit {
 
   public isMenuCollapsed = true;
 
-  constructor(public router: Router, public readonly mainService: MainService) { }
+  constructor(public router: Router, private readonly mainService: MainService) { }
 
   ngOnInit(): void {
+  }
+
+  updateUI(): void{
+    this.mainService.navBarToggle.emit();
+    this.mainService.showClass.next(!this.mainService.showClass.value);
   }
 
 }

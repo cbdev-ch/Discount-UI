@@ -1,11 +1,14 @@
 import {EventEmitter, Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainService {
 
-  NavBarToggle = new EventEmitter<boolean>();
+  navBarToggle = new EventEmitter();
+  showClass = new BehaviorSubject<boolean>(true);
 
   constructor() { }
+
 }

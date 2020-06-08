@@ -13,9 +13,7 @@
         <a class="nav-link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLink]="['/discount']" (click)="isMenuCollapsed = true">Discount</a>
       </li>
       <li *ngIf="router.url ==='/discount'" class="nav-item">
-        <button type="button" mat-button (click)="mainService.NavBarToggle.emit()">
-          Toggle sidenav
-        </button>
+        <button type="button" class="btn btn-outline-primary" (click)="updateUI();">Toggle Categories</button>
       </li>
     </ul>
   </div>

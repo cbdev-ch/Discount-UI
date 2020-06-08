@@ -1,0 +1,40 @@
+mat-selection-list{
+  padding-top: 15px;
+}
+
+mat-sidenav{
+  padding-right: 15px;
+}
+
+mat-sidenav-content {
+  background-color: white;
+  padding-top: 15px;
+}
+
+.p-l-15{
+  padding-left: 15px;
+}
+
+.card-container{
+  min-width: 275px;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.card > img{
+  padding: 15px;
+  width: auto;
+  max-width: 150px;
+  height: auto;
+  max-height: 150px;
+  margin: 0 auto;
+}
+
+.card-header > h5{
+  margin: 0;
+}
+
+li > p{
+  width: 200px;
+}
