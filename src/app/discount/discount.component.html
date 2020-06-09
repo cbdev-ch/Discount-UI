@@ -7,7 +7,7 @@
     </mat-selection-list>
   </mat-sidenav>
   <mat-sidenav-content [ngClass]="mainService.showClass.value ? 'p-l-15' : ''">
-    <h2 *ngIf="!products" class="text-center">please select a category.</h2>
+    <h2 *ngIf="!products" class="text-center mt-5">please select a category.</h2>
 
     <div *ngIf="products">
 
@@ -19,9 +19,12 @@
             </div>
             <img src="assets/{{product.category}}/{{product.productType}}.png">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><p>Store:</p> <span>{{product.storeName}}</span></li>
-              <li class="list-group-item">Discount: {{product.isDiscount}}</li>
-              <li class="list-group-item">Availability: {{product.isAvailable}}</li>
+              <li class="list-group-item"><p class="d-inline-block">Store:</p><span>{{product.storeName}}</span></li>
+              <li class="list-group-item"><p class="d-inline-block">Status:</p>
+                <span *ngIf="product.isDiscount" class="badge badge-success">Discount</span>
+                <span *ngIf="product.isAvailable" class="badge badge-primary">Available</span>
+                <span *ngIf="!product.isAvailable" class="badge badge-danger">Not Available</span>
+              </li>
             </ul>
           </div>
         </div>
