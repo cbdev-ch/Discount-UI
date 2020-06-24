@@ -17,14 +17,17 @@
             <div class="card-header">
               <h5>{{product.productName}} {{product.productType}}</h5>
             </div>
-            <img src="assets/{{product.category}}/{{product.productType}}.png">
+            <a href="{{ product.url }}" target="_blank">
+              <img src="assets/{{product.category}}/{{product.productType}}.png">
+            </a>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><p class="d-inline-block">Store:</p><span>{{product.storeName}}</span></li>
               <li class="list-group-item"><p class="d-inline-block">Status:</p>
                 <span *ngIf="product.isDiscount" class="badge badge-success">Discount</span>
-                <div *ngIf="!product.isDiscount">
+                <div *ngIf="!product.isDiscount" style="display:inline-block;">
                   <span *ngIf="product.isAvailable" class="badge badge-primary">Available</span>
                   <span *ngIf="product.isAvailable === false" class="badge badge-danger">Not Available</span>
+                  <span *ngIf="product.isAvailable === undefined || product.isAvailable === null" class="badge badge-warning">Unknown</span>
                 </div>
               </li>
             </ul>

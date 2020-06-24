@@ -22,13 +22,17 @@ mat-sidenav-content {
   margin-bottom: 15px;
 }
 
-.card > img{
+.card > a img{
   padding: 15px;
   width: auto;
   max-width: 150px;
   height: auto;
   max-height: 150px;
   margin: 0 auto;
+}
+
+.card > a {
+  text-align: center;
 }
 
 .card-header > h5{
