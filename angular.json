@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Discount-UI"
+  "defaultProject": "Discount-UI",
+  "cli": {
+    "analytics": false
+  }
 }

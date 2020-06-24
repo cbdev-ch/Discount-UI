@@ -22,8 +22,10 @@
               <li class="list-group-item"><p class="d-inline-block">Store:</p><span>{{product.storeName}}</span></li>
               <li class="list-group-item"><p class="d-inline-block">Status:</p>
                 <span *ngIf="product.isDiscount" class="badge badge-success">Discount</span>
-                <span *ngIf="product.isAvailable" class="badge badge-primary">Available</span>
-                <span *ngIf="!product.isAvailable" class="badge badge-danger">Not Available</span>
+                <div *ngIf="!product.isDiscount">
+                  <span *ngIf="product.isAvailable" class="badge badge-primary">Available</span>
+                  <span *ngIf="product.isAvailable === false" class="badge badge-danger">Not Available</span>
+                </div>
               </li>
             </ul>
           </div>
